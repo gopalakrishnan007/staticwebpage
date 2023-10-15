@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .contactmess label, .cntbtn{
+            margin: 5px;
+        }
+        
+            
+        .image-container{
+            height: 80%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: #827d7b;
+
+        }
+        #carouselExampleInterval{
+            height: 80%;
+            width: 80%;
+        }
+        
+        
+    </style>
+</head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <div class="top-container">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">Asura</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Updates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="image-container" >
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img src="images/bae.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="/project/images/ironman.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="/project/images/solo.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <div class="bottom-container" style="background-color: rgb(248, 250, 251);">
+        <div class="row">
+            <h4 style="text-align: center;">Contact us through</h6>
+            <div class="col" style="text-align: center;">
+                `<h6>Social media handdels</h6>
+                <p>
+                    <i class="fa-brands fa-facebook fa-xl" style="color: #6593e2;"></i>
+                    <a href="facebook.com">Facebook</a> </p>
+                <p>
+                    <i class="fa-brands fa-telegram fa-xl" style="color: #436ff4;"></i>
+                    <a href="telegram.com"> Telegram</a></p>
+                <p>
+                    <i class="fa-brands fa-discord fa-xl" style="color: #467fe2;"></i>
+                    <a href="https://discord.com/">Discord</a></p>
+                <p>
+                    <i class="fa-brands fa-reddit fa-xl" style="color: #dd431d;"></i>
+                    <a href="https://www.reddit.com/">Reddit</a></p>
+            </div>
+    
+            <div class="col-md-6 contactmess" style="text-align: center;">
+                <h6>Leave us a message</h6>
+                <form action="">
+                    <label for="name">Enter your name</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="message">Message</label><br>
+                    <input type="text" id="message" name="message"><br>
+                    <input type="submit" class="cntbtn" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+  </body>
+</html>
