@@ -4,35 +4,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lato&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         .contactmess label, .cntbtn{
             margin: 5px;
         }
-        
+        body{
+            margin: 0px;
+            background-color: rgb(82, 81, 81);
+        }
             
         .image-container{
-            height: 80%;
+            height: 50%;
             align-items: center;
             justify-content: center;
             display: flex;
-            background-color: #827d7b;
+            
 
         }
         #carouselExampleInterval{
-            height: 80%;
-            width: 80%;
+            height: 100%;
+            width: 90%;
+        }
+        .popular{
+            background-color: rgb(168, 164, 160);
+            width: 90%;
         }
         
-        
+        .card{
+            margin: 20px 0;
+        }
+        .h5tag{
+           overflow-wrap: break-word;
+           white-space:pre-wrap;
+           word-break: keep-all;
+           font-family: 'EB Garamond', serif;
+        }
+        .pophead , .last , .contact{
+            font-family: 'Montserrat', sans-serif;
+            padding-top: 10px;
+            font-weight: 800;
+        }
+        .latest{
+            width: 90%;
+            background-color: #436ff4;
+            display: block;
+            background-color: rgb(161, 157, 154);
+        }
     </style>
 </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <div class="top-container">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <div class="container-fluid">
+            <div class="container-fluid" style="width: 90%;">
                 <a href="#" class="navbar-brand">Asura</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -43,13 +72,16 @@
                             <a href="#" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Updates</a>
+                            <a href="#Trending" class="nav-link">Trending</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Contact us</a>
+                            <a href="#latest" class="nav-link">Latest</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Login</a>
+                            <a href="#contactus" class="nav-link">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -59,14 +91,14 @@
     <div class="image-container" >
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="2000">
+              <div class="carousel-item active" data-bs-interval="3000">
                 <img src="images/bae.jpg" class="d-block w-100" alt="...">
               </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="/project/images/ironman.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/ironman.jpg" class="d-block w-100" alt="...">
               </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="/project/images/solo.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/solo.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -79,9 +111,147 @@
             </button>
           </div>
     </div>
-    <div class="bottom-container" style="background-color: rgb(248, 250, 251);">
+    <div class="popular container-fluid" id="Trending" >
+        <h4 class="pophead">Trending</h4>
         <div class="row">
-            <h4 style="text-align: center;">Contact us through</h6>
+            <div class="col-md-3 col-6">
+                <div class="card" >
+                    <img src="images/icon/cover3_28129_copy (1).webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5  class="card-title h5tag">Insructor</h5>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card" >
+                    <img src='images/icon/ArchmageTranscendingCover01 (1).webp' class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Archmage</h5>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card" >
+                    <img src="images/icon/AcademyGeniusSwordmasterCover01 (1).webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Swordmaster</h5>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <img src="images/icon/battleGodCover03 (1).webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Battlegod</h5>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="latest container-fluid" id="latest">
+        <h4 class="last">Latest</h4>
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <img src="images/icon/battleGodCover03 (1).webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Battlegod</h5>
+                      <ul>
+                        <li>chapter 10</li>
+                        <li>chapter 9</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <img src="images/icon/Damn-ReincarnationCover005 (1).webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Haki</h5>
+                      <ul>
+                        <li>chapter 32</li>
+                        <li>chapter 31</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <img src="images/icon/IronBloodSwordHound05-1 (1).webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Iron blood</h5>
+                      <ul>
+                        <li>chapter 40</li>
+                        <li>chapter 39</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <img src="images/icon/nanoMashineCover02 (1).webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Nano</h5>
+                      <ul>
+                        <li>chapter 1</li>
+                        <li>chapter 0</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <img src="images/icon/resource-2-1 (1).jpg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Ranker</h5>
+                      <ul>
+                        <li>chapter 92</li>
+                        <li>chapter 91</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <img src="images/icon/cover3_28129_copy (1).webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Insructor</h5>
+                      <ul>
+                        <li>chapter 55</li>
+                        <li>chapter 54</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <img src="images/icon/ReformationoftheDeadbeatNoble02-kopya.jpg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Nobel</h5>
+                      <ul>
+                        <li>chapter 24</li>
+                        <li>chapter 23</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <img src="images/icon/swordmastersyoungestCover02.jpg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title h5tag">Swordmaster</h5>
+                      <ul>
+                        <li>chapter 10</li>
+                        <li>chapter 9</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-container container-fluid" id="contactus" style="background-color: rgb(248, 250, 251) ; padding: 20px; width: 90%;">
+        <div class="row">
+            <h4 style="text-align: center;" class="contact">Contact us through</h6>
             <div class="col" style="text-align: center;">
                 `<h6>Social media handdels</h6>
                 <p>
